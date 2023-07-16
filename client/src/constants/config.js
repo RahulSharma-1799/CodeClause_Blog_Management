@@ -10,7 +10,8 @@ export const API_NOTIFICATION_MESSAGES = {
   },
   responseFailure: {
     title: "Error",
-    message: "Error occurred while fetching response from server.Please try again"
+    message:
+      "Error occurred while fetching response from server.Please try again",
   },
   requestFailure: {
     title: "Error",
@@ -18,13 +19,16 @@ export const API_NOTIFICATION_MESSAGES = {
   },
   networkError: {
     title: "Error",
-    message: "Unable to connect with server. Please check internet connectivity and try again later",
-  }
+    message:
+      "Unable to connect with server. Please check internet connectivity and try again later",
+  },
 };
 
-//API SERVICE CALL  
+//API SERVICE CALL
 
 export const SERVICE_URLS = {
   userSignup: { url: "/signup", method: "POST" },
   userLogin: { url: "/login", method: "POST" },
+  uploadFile: { url: "/file/upload", method: "POST" },
+  createPost: { url: "create", method: "POST" },
 };

@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Login from "./components/account/Login";
 import DataProvider from "./context/DataProvider";
+import CreatePost from "./components/create/CreatePost";
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,7 +26,6 @@ function App() {
   return (
     <DataProvider>
       <Router>
-        
         <div style={{ marginTop: "50px" }}>
           <Routes>
             <Route
@@ -37,7 +37,13 @@ function App() {
               element={<PrivateRoute isAuthenticated={isAuthenticated} />}
             >
               <Route path="/" element={<Home />} />
-            </Route> 
+            </Route>
+            <Route
+              path="/create"
+              element={<PrivateRoute isAuthenticated={isAuthenticated} />}
+            >
+              <Route path="/create" element={<CreatePost />} />
+            </Route>
           </Routes>
         </div>
       </Router>

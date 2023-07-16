@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getAccessToken } from "../utils/common-utils.js";
 import {
   API_NOTIFICATION_MESSAGES,
   SERVICE_URLS,
@@ -93,6 +94,9 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       url: value.url,
       data: body,
       responseType: value.responseType,
+      headers: {
+        authorization: getAccessToken(),
+      },
       onUploadProgress: function (progressEvent) {
         if (showUploadProgress) {
           let percentageCompleted = Math.round(
@@ -112,4 +116,4 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
     });
 }
 
-export  { API };
+export { API };
