@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import Login from "./components/account/Login";
 import DataProvider from "./context/DataProvider";
 import CreatePost from "./components/create/CreatePost";
+import DetailView from "./components/details/DetailView";
 import {
   BrowserRouter as Router,
   Routes,
@@ -43,6 +44,12 @@ function App() {
               element={<PrivateRoute isAuthenticated={isAuthenticated} />}
             >
               <Route path="/create" element={<CreatePost />} />
+            </Route>
+            <Route
+              path="/details/:id"
+              element={<PrivateRoute isAuthenticated={isAuthenticated} />}
+            >
+              <Route path="/details/:id" element={<DetailView />} />
             </Route>
           </Routes>
         </div>
