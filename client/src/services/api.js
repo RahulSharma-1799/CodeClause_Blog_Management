@@ -64,7 +64,7 @@ const processError = (error) => {
   if (error.response) {
     //request made but server responded with other status code
     //thats is out of range 2.x.x
-    console.log("Error in response:", error.toJSON());
+    // console.log("Error in response:", error.toJSON());
     return {
       isError: true,
       msg: API_NOTIFICATION_MESSAGES.responseFailure,
@@ -96,7 +96,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
     axiosInstance({
       method: value.method,
       url: value.url,
-      data: body,
+      data: value.method === "DELETE" ? {} : body,
       responseType: value.responseType,
       headers: {
         authorization: getAccessToken(),

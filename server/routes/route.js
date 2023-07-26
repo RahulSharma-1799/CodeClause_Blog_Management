@@ -6,6 +6,7 @@ import {
   getAllPosts,
   getPost,
   updatePost,
+  deletePost,
 } from "../controller/post-controller.js";
 import { authenticateToken } from "../controller/jwt-controller.js";
 import upload from "../utils/upload.js";
@@ -18,5 +19,5 @@ route.post("/create", authenticateToken, createPost);
 route.get("/posts", authenticateToken, getAllPosts);
 route.get("/post/:id", authenticateToken, getPost);
 route.put("/update/:id", authenticateToken, updatePost);
-
+route.delete("/delete/:id", authenticateToken, deletePost);
 export default route;
