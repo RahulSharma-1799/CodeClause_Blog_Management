@@ -33,4 +33,5 @@ export const SERVICE_URLS = {
   createPost: { url: "create", method: "POST" },
   getAllPosts: { url: "/posts", method: "GET", params: true },
   getPostById: { url: "post", method: "GET", query: true },
+  updatePost: { url: "update", method: "PUT", query: true },
 };

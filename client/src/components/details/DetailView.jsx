@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Box, Typography, styled } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { API } from "../../services/api.js";
 import { DataContext } from "../../context/DataProvider.jsx";
 const Container = styled(Box)`
@@ -63,7 +63,9 @@ const DetailView = () => {
       <Box style={{ float: "right" }}>
         {account.username === post.username && (
           <>
-            <EditIcon color="primary" />
+            <Link to={`/update/${post._id}`}>
+              <EditIcon color="primary" />
+            </Link>
             <DeleteIcon color="error" />
           </>
         )}
@@ -72,7 +74,10 @@ const DetailView = () => {
       <Heading>{post.title}</Heading>
       <Author>
         <Typography>
-          Author: <Box component='span' style={{fontWeight:'600'}}>{post.username}</Box>
+          Author:{" "}
+          <Box component="span" style={{ fontWeight: "600" }}>
+            {post.username}
+          </Box>
         </Typography>
         <Typography>{new Date(post.createdAt).toDateString()}</Typography>
       </Author>

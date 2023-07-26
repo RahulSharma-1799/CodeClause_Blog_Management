@@ -5,6 +5,7 @@ import Login from "./components/account/Login";
 import DataProvider from "./context/DataProvider";
 import CreatePost from "./components/create/CreatePost";
 import DetailView from "./components/details/DetailView";
+import Update from "./components/create/Update";
 import {
   BrowserRouter as Router,
   Routes,
@@ -50,6 +51,12 @@ function App() {
               element={<PrivateRoute isAuthenticated={isAuthenticated} />}
             >
               <Route path="/details/:id" element={<DetailView />} />
+            </Route>
+            <Route
+              path="/update/:id"
+              element={<PrivateRoute isAuthenticated={isAuthenticated} />}
+            >
+              <Route path="/update/:id" element={<Update/>} />
             </Route>
           </Routes>
         </div>
