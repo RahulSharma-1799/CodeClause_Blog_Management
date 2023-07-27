@@ -6,6 +6,8 @@ import DataProvider from "./context/DataProvider";
 import CreatePost from "./components/create/CreatePost";
 import DetailView from "./components/details/DetailView";
 import Update from "./components/create/Update";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import {
   BrowserRouter as Router,
   Routes,
@@ -56,7 +58,21 @@ function App() {
               path="/update/:id"
               element={<PrivateRoute isAuthenticated={isAuthenticated} />}
             >
-              <Route path="/update/:id" element={<Update/>} />
+              <Route path="/update/:id" element={<Update />} />
+            </Route>
+
+            <Route
+              path="/about"
+              element={<PrivateRoute isAuthenticated={isAuthenticated} />}
+            >
+              <Route path="/about" element={<About />} />
+            </Route>
+
+            <Route
+              path="/contact"
+              element={<PrivateRoute isAuthenticated={isAuthenticated} />}
+            >
+              <Route path="/contact" element={<Contact />} />
             </Route>
           </Routes>
         </div>
