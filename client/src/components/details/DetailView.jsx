@@ -4,6 +4,7 @@ import { Edit, Delete } from "@mui/icons-material";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { API } from "../../services/api.js";
 import { DataContext } from "../../context/DataProvider.jsx";
+import Comments from "./comments/Comments.jsx";
 const Container = styled(Box)(({ theme }) => ({
   margin: "65px 100px",
   [theme.breakpoints.down("md")]: {
@@ -92,6 +93,7 @@ const DetailView = () => {
         <Typography>{new Date(post.createdAt).toDateString()}</Typography>
       </Author>
       <Description>{post.description}</Description>
+      <Comments post={post} />
     </Container>
   );
 };

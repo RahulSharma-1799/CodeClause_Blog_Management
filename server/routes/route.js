@@ -8,6 +8,11 @@ import {
   updatePost,
   deletePost,
 } from "../controller/post-controller.js";
+import {
+  newComment,
+  getComments,
+  deleteComment,
+} from "../controller/comment-controller.js";
 import { authenticateToken } from "../controller/jwt-controller.js";
 import upload from "../utils/upload.js";
 const route = express.Router();
@@ -20,4 +25,7 @@ route.get("/posts", authenticateToken, getAllPosts);
 route.get("/post/:id", authenticateToken, getPost);
 route.put("/update/:id", authenticateToken, updatePost);
 route.delete("/delete/:id", authenticateToken, deletePost);
+route.post("/comment/new", authenticateToken, newComment);
+route.get("/comments/:id", authenticateToken, getComments);
+route.delete("/comment/delete/:id", authenticateToken, deleteComment);
 export default route;
