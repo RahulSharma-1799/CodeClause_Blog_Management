@@ -32,6 +32,7 @@ const Comments = ({ post }) => {
 
   const url = "https://static.thenounproject.com/png/12017-200.png";
   useEffect(() => {
+    if (post._id === undefined) return;
     const getData = async () => {
       const response = await API.getAllComments(post._id);
       if (response.isSuccess) {
