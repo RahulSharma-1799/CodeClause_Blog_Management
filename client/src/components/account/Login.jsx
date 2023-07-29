@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Box, TextField, Button, styled, Typography } from "@mui/material";
 import { API } from "../../services/api.js";
 import { DataContext } from "../../context/DataProvider.jsx";
@@ -123,6 +123,7 @@ const Login = ({ isUserAuthenticated }) => {
             />
             <TextField
               variant="standard"
+              type="password"
               label="Enter password"
               value={login.password}
               name="password"
@@ -153,6 +154,7 @@ const Login = ({ isUserAuthenticated }) => {
             />
             <TextField
               variant="standard"
+              type="password"
               onChange={(e) => onInputChange(e)}
               name="password"
               label="Enter password"
