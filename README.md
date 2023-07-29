@@ -96,8 +96,18 @@ This project was created using the following technologies.
 
  - [MongoDB ](https://www.mongodb.com/) - It provides a free cloud service to store MongoDB collections.
  
- ##  Screenshots 
- 
+ ##  Screenshots
+ --- -
+ ![1](https://github.com/RahulSharma-1799/CodeClause_Blog_Management/assets/110728597/a6bc39fc-817e-4275-8f9d-a96031a57376)
+ --- -
+![2](https://github.com/RahulSharma-1799/CodeClause_Blog_Management/assets/110728597/83520dbb-42a3-483b-98d4-f3335e30885c)
+--- -
+![3](https://github.com/RahulSharma-1799/CodeClause_Blog_Management/assets/110728597/0f12e60b-085d-46f3-a21b-27a99ec5fd06)
+--- -
+![4](https://github.com/RahulSharma-1799/CodeClause_Blog_Management/assets/110728597/c609a151-cba2-4fde-9ea9-216a2c430724)
+--- -
+
+![5](https://github.com/RahulSharma-1799/CodeClause_Blog_Management/assets/110728597/924374eb-62d7-44d9-adbd-a8613c003271)
 
 
 ## Author
