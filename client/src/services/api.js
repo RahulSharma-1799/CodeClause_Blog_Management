@@ -4,7 +4,12 @@ import {
   API_NOTIFICATION_MESSAGES,
   SERVICE_URLS,
 } from "../constants/config.js";
-const API_URL = "http://localhost:5000";
+let API_URL = "";
+if (process.env.REACT_APP_ENV === "production") {
+  API_URL = "https://blog-management-9teh.onrender.com";
+} else {
+  API_URL = "http://localhost:5000";
+}
 const axiosInstance = axios.create({
   baseURL: API_URL,
   timeout: 10000,
