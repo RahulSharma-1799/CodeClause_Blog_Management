@@ -14,9 +14,9 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", route);
 
-app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/build/index.html"));
+  res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
 });
 
 connectToMongo();
